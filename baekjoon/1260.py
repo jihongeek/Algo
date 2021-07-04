@@ -5,13 +5,14 @@ def bfs(v):
     visited = [False]*n
     deq = deque()
     visited[v-1] = True
+    print(v,end = " ")
     deq.append(v-1)
     while len(deq) > 0:
         now = deq.popleft()
         for i in range(n):
             if graph[now][i] and not visited[i]:
                 visited[i] = True
-                print(now+1,end = " ")
+                print(i+1,end = " ")
                 deq.append(i)
 def dfs(v,visited : list):
     global n
@@ -22,7 +23,7 @@ def dfs(v,visited : list):
         if graph[v-1][i] and not visited[i]:
             visited[i] = True
             dfs(i+1,visited) 
-            break 
+            continue 
         else:
             isEnd = True
     if isEnd:
