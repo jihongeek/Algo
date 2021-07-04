@@ -3,17 +3,17 @@ from collections import deque
 def bfs(v):
     global n
     visited = [False]*n
-    deq = deque()
+    q = deque()
     visited[v-1] = True
     print(v,end = " ")
-    deq.append(v-1)
+    q.append(v-1)
     while len(deq) > 0:
         now = deq.popleft()
         for i in range(n):
             if graph[now][i] and not visited[i]:
                 visited[i] = True
                 print(i+1,end = " ")
-                deq.append(i)
+                q.append(i)
 def dfs(v,visited : list):
     global n
     visited[v-1] = True
