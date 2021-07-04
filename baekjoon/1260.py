@@ -7,8 +7,8 @@ def bfs(v):
     visited[v-1] = True
     print(v,end = " ")
     q.append(v-1)
-    while len(deq) > 0:
-        now = deq.popleft()
+    while len(q) > 0:
+        now = q.popleft()
         for i in range(n):
             if graph[now][i] and not visited[i]:
                 visited[i] = True
