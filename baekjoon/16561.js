@@ -10,7 +10,6 @@ rl.on("line", function(line) {
     let count = 0
     for (let i = 3; i < n; i = i + 3) {
         for (let j = 3; j < n; j = j + 3) {
-            console.log(i,j,n-i-j)
             if ((n - i - j) % 3 == 0 && n-i-j > 0) {
                 count++;
             }
