@@ -9,7 +9,7 @@ from sys import stdin, setrecursionlimit
 """
 
 # 재귀를 사용해서 풀기 때문에 파이썬의 재귀 제한 (종특)을 풀어줘야 한다.
-setrecursionlimit(100000)
+setrecursionlimit(10**6)
 
 n,r,q = map(int, stdin.readline().strip().split())
 
