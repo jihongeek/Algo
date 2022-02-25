@@ -28,7 +28,7 @@ for _ in range(n):
         single_numbers.append(number)
     else:
         number_frequencies[number] += 1
-print("%.0f"%(sum_of_numbers/n))
+print(round(sum_of_numbers/n))
 numbers.sort()
 print(numbers[n//2])
 single_numbers.sort(key = lambda x : (-number_frequencies[x],x))
