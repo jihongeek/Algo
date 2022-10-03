@@ -8,6 +8,7 @@ from sys import stdin
 
 while True:
     isBalanced = True
+    # 개행 컷
     given_string = stdin.readline().strip("\n")
     if given_string == ".":
         break
